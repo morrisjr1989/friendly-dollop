@@ -20,12 +20,11 @@ def shuffle_files(df):
 
     df_bad_emails = pd.concat([bad_email_df,no_email_df])
     df_bad_emails.drop(columns=['email_helper'], inplace=True)
-    print(df_bad_emails.size)
     df_bad_emails.drop_duplicates(keep='first', inplace=True)
-    print(df_bad_emails.size)
 
     df_bad_emails.to_pickle('./DataFiles/df_with_bad_emails.pickle')
     
+
     return df_with_email
 
 if __name__ == '__main__':
