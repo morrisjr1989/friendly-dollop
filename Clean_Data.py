@@ -50,4 +50,4 @@ combined_data_df = pd.merge(left=combined_data_df, right= store_codes_df, how='l
 
 combined_data_df.to_csv('./DataFiles/combined_data_master.csv', index=False)
 
-print('Completed:  2 - Clean Data')
+print('Completed:  2 - Clean Data -','combined data master done' )
