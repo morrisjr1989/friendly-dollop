@@ -4,7 +4,7 @@ import pandas as pd
 import re
 import numpy as np
 
-combined_data_df = pd.read_csv('./DataFiles/combined_data2018-08-29.csv')
+combined_data_df = pd.read_csv('./DataFiles/combined_data2018-08-31.csv')
 
 ## Find and drop bad email addresses
 
