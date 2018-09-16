@@ -9,6 +9,10 @@ import re
 pd.options.mode.chained_assignment = None
 
 def stage_files():
+    '''
+    Extracted from  JupyterNotebook used to append and update master SalesTransaction File
+    '''
+
     #shush warnings
     warnings.simplefilter(action='ignore', category=FutureWarning)
 
