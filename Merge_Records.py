@@ -7,7 +7,10 @@ from pathlib import Path
 
 
 def merge_customer_files():
-    folder_exportcustomers = Path(".\DataFiles\ExportCustomers")
+    '''
+    Merge customer files after combining from two folders. Each folder/file data includes essential pieces to the conversion project
+    '''
+    folder_exportcustomers = Path(".\DataFiles\ExportCustomers") #this pathing is not available from GitHub Report - it will need to be built.
     # Create an empty list
 
     frames_ExportCustomerAll = []
@@ -19,7 +22,7 @@ def merge_customer_files():
         file_path = Path.joinpath(folder_exportcustomers, file)
         
         
-        if file == "merge_records.py": pass
+        if file == "merge_records.py": pass #this file will reside within the same folder; pass it during operations.
         
         
         elif file_type == "Export Customer All.csv":
@@ -34,7 +37,6 @@ def merge_customer_files():
             frames_ExportCustomer.append(df)
             #df.to_pickle(store_code+"_"+"ExportCustomers.pickle")     
 
-    print(frames_ExportCustomer, frames_ExportCustomerAll)
     ExportCustomerAll_df = pd.concat(frames_ExportCustomerAll)      
     ExportCustomer_df = pd.concat(frames_ExportCustomer)                                                                                                                                                                                                      
 
